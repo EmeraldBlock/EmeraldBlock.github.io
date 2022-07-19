@@ -7,6 +7,13 @@
     src: url(/assets/Roboto-Regular.ttf) format("truetype");
 }
 
+:root {
+    --bg-light: #e0fff0;
+    --bg-dark: #c0ffe0;
+    --faint: #00000080;
+    --fainter: #00000020;
+}
+
 /* utilities */
 
 a[rel*="external"]::after {
@@ -26,7 +33,7 @@ a[rel*="external"]::after {
 .download {
     float: right;
     margin: 16px 0;
-    background-color: #c0ffe0;
+    background-color: var(--bg-dark);
     padding: 16px;
 
     > h2 {
@@ -38,7 +45,7 @@ a[rel*="external"]::after {
         font-size: 1.25em;
         
         > span {
-            color: #00000080;
+            color: var(--faint);
         }
     }
 }
@@ -51,7 +58,7 @@ a[rel*="external"]::after {
 
 .item {
     position: relative;
-    background-color: #c0ffe0;
+    background-color: var(--bg-dark);
 
     > a {
         position: absolute;
@@ -79,7 +86,7 @@ a[rel*="external"]::after {
     }
     > span {
         font-weight: bold;
-        color: #00000080;
+        color: var(--faint);
     }
 }
 
@@ -89,7 +96,7 @@ a[rel*="external"]::after {
 
     > a {
         pointer-events: auto;
-        border: solid 2px #00000020;
+        border: solid 2px var(--fainter);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,7 +106,7 @@ a[rel*="external"]::after {
     }
 
     > .itemlink {
-        background-color: #e0fff0;
+        background-color: var(--bg-light);
         gap: 0.25em;
 
         &::before {
@@ -118,13 +125,13 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: #e0fff0;
+    background-color: var(--bg-light);
     min-width: 512px;
     font-family: Roboto, sans-serif;
 }
 
 header {
-    background-color: #c0ffe0;
+    background-color: var(--bg-dark);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -153,7 +160,7 @@ header {
     display: inline-flex;
     align-items: center;
     font-size: 32px;
-    color: #00000020;
+    color: var(--fainter);
     pointer-events: none;
     user-select: none;
     
@@ -217,7 +224,7 @@ header {
 
 nav {
     order: 1;
-    background-color: #c0ffe0;
+    background-color: var(--bg-dark);
     margin: 16px 0;
     width: 128px;
     padding: 16px;
