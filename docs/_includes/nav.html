@@ -1,0 +1,10 @@
+{% assign url = include.url | append: include.tree.name %}
+<a href={{ url }}>{{ include.tree.name }}</a>
+<ul>
+{% for tree in include.tree.content %}
+<li>
+    {% include nav.html tree=tree url=url %}
+    {% assign url = include.url | append: include.tree.name %}
+</li>
+{% endfor %}
+</ul>

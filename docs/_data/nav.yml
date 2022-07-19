@@ -1,0 +1,7 @@
+tree:
+  name: /
+  content:
+    - name: shapez/
+      content:
+        - name: mods/
+        - name: old-mods/

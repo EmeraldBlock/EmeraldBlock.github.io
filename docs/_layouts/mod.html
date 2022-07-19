@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% assign data = site.data.mods.items[page.modid] %}
+{% include data.html id=page.modid data=data %}
+<div class="download itemclick">
+    <h2>download</h2>
+    <a class="itemlink" href="{{ file }}" download="{{ download }}">latest <span>{{ data.version }}</span></a>
+</div>
+<div class="flavor">
+    <h1>{{ data.title }}</h1>
+    <i>{{ data.content }}</i>
+</div>
+{{ content }}

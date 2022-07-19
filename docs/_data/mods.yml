@@ -1,0 +1,5 @@
+items:
+  upmouse:
+    version: "1.0.0"
+    title: Drag, don't edit!
+    content: Dragging the map is prioritized over triggering stuff

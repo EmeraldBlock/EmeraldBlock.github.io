@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page.title }}</title>
+        <link rel="icon" type="image/png" href="/assets/favicon.svg"/>
+        <link rel="stylesheet" href="/assets/common.css"/>
+    </head>
+    <body>
+        <header>
+            <div id="headerbox">
+                <a id="icon" href="/">
+                    <img width="48px" src="/assets/favicon.svg">
+                </a>
+                <span id="items">
+                    <a href="/">
+                        emeraldblock
+                    </a>
+                    emerald
+                    <a href="/shapez/mods">
+                        mods
+                    </a>
+                    emerald<span>green</span>emerald<span>city</span>emerald
+                    <a id="source" href="https://github.com/EmeraldBlock/EmeraldBlock.github.io" target="_blank" rel="external noreferrer">
+                        source
+                    </a>
+                </span>
+            </div>
+        </header>
+        <div id="core">
+            <nav>
+                <h2>navigation</h2>
+                <div id="navlist">
+                    {% include nav.html tree=site.data.nav.tree %}
+                </div>
+                <i>isn't everything</i>
+            </nav>
+            <main>
+                {% if page.url != "/" %}
+                {% assign last = page.url | slice: -1 %}
+                <a id="back" href="{% if last == '/' %}.{% endif %}./">⮤</a>
+                {% endif %}
+                {{ content }}
+            </main>
+        </div>
+    </body>
+</html>

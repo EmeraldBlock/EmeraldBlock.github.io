@@ -1,0 +1,20 @@
+{% assign id = include.item[0] %}
+{% assign data = include.item[1] %}
+{% include data.html id=id data=data list=true %}
+<div class="item">
+    <a href="{{ href }}"></a>
+    <div>
+        <div>
+            <div class="itemtitle"><h3>{{ data.title }}</h3> <span>{{ data.version }}</span></div>
+            {{ data.content }}
+        </div>
+        <div class="itemclick">
+            <a class="itemlink" href="{{ file }}" download="{{ download }}">
+                download
+            </a>
+            <a href="{{ href }}">
+                webpage
+            </a>
+        </div>
+    </div>
+</div>
