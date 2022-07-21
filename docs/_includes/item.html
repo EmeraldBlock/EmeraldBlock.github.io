@@ -5,14 +5,14 @@
     <a href="{{ href }}"></a>
     <div>
         <div>
-            <div class="itemtitle"><h3>{{ data.title }}</h3> <span class="version">{{ data.version }}</span></div>
+            <div class="itemtitle"><h3>{{ data.title }}</h3> <span class="version">{{ data.latest }}</span></div>
             {{ data.content }}
         </div>
         <div class="itemclick">
-            <a class="itemlink" href="{{ file }}" download="{{ download }}">
+            <a href="{{ folder }}{{ data.latest }}.js" download="{{ id }}_{{ data.latest }}.js">
                 download
             </a>
-            <a href="{{ href }}">
+            <a class="also" href="{{ href }}">
                 webpage
             </a>
         </div>

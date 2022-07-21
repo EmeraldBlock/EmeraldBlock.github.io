@@ -4,11 +4,7 @@
 {% unless href %}
 {% capture href %}./{% if include.list %}{{ id }}/{% endif %}{% endcapture %}
 {% endunless %}
-{% assign file = data.file %}
-{% unless file %}
-{% capture file %}./{% if include.list %}{{ id }}/{% endif %}mod.js{% endcapture %}
-{% endunless %}
-{% assign download = data.download %}
-{% unless download %}
-{% capture download %}{{ id }}.js{% endcapture %}
+{% assign folder = data.folder %}
+{% unless folder %}
+{% capture folder %}./{% if include.list %}{{ id }}/{% endif %}files/{% endcapture %}
 {% endunless %}

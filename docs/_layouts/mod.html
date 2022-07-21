@@ -4,9 +4,17 @@ layout: default
 {% assign data = site.data.mods.items[page.modid] %}
 {% include data.html id=page.modid data=data %}
 <div class="download itemclick">
-    <h2>download</h2>
-    <a class="itemlink" href="{{ file }}" download="{{ download }}"><span>latest <span class="version">{{ data.version }}</span></span></a>
-    <a href="https://github.com/EmeraldBlock/shapez.io-mods/tree/master/src/upmouse" target="_blank" rel="external noreferrer">source</a>
+    <input id="show" type="checkbox">
+    <div class="downloadtitle"><h2>download</h2><label for="show"></label></div>
+    {% for version in data.versions %}
+    {% case version %}
+    {% when data.latest %}
+    <a class="primary" href="{{ folder }}{{ version }}.js" download="{{ id }}_{{ version }}.js"><span>latest <span class="version">{{ version }}</span></span></a>
+    {% else %}
+    <a class="hide" href="{{ folder }}{{ version }}.js" download="{{ id }}_{{ version }}.js">{{ version }}</a>
+    {% endcase %}
+    {% endfor %}
+    <a class="also" href="https://github.com/EmeraldBlock/shapez.io-mods/tree/master/src/upmouse" target="_blank" rel="external noreferrer">source</a>
 </div>
 <div class="flavor">
     <h1>{{ data.title }}</h1>

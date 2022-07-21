@@ -81,6 +81,7 @@ a[rel*="external"]::after {
     > a {
         pointer-events: auto;
         border: solid 2px var(--fainter);
+        background-color: var(--bg-light);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,8 +99,8 @@ a[rel*="external"]::after {
         }
     }
 
-    > .itemlink {
-        background-color: var(--bg-light);
+    > .also {
+        background-color: unset;
     }
 }
 
@@ -108,14 +109,48 @@ a[rel*="external"]::after {
     margin: 16px 0 16px 16px;
     background-color: var(--bg-dark);
     padding: 16px;
+    display: flex;
+    flex-direction: column;
+
+    > input {
+        display: none;
+    }
+
+    > .primary {
+        font-size: 1.25em;
+    }
+
+    > input:not(:checked) ~ .hide {
+        display: none;
+    }
+}
+
+.downloadtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     > h2 {
+        display: inline;
         margin: 0;
         font-size: 1.25em;
     }
 
-    > .itemlink {
-        font-size: 1.25em;
+    > label {
+        border: solid 2px var(--fainter);
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        justify-content: center;
+        cursor: pointer;
+
+        &::after {
+            content: "+";
+
+            input:checked ~ & {
+                content: "−";
+            }
+        }
     }
 }
 
