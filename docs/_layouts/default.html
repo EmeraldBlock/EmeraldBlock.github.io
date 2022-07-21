@@ -37,7 +37,7 @@
             <main>
                 {% if page.url != "/" %}
                 {% assign last = page.url | slice: -1 %}
-                <a id="back" href="{% if last == '/' %}.{% endif %}./">⮤</a>
+                <a id="back" href="{% if page.url != '/404.html' %}{% if last == '/'%}.{% endif %}.{% endif %}/">⮤</a>
                 {% endif %}
                 {{ content }}
             </main>
