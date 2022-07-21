@@ -6,3 +6,9 @@ items:
     latest: "1.0.1"
     title: Drag, don't edit!
     content: Dragging the map is prioritized over triggering stuff
+old:
+  soundZ:
+    branch: sound
+    latest: "0.1.0 (base 1.2.1)"
+    title: soundZ
+    content: Adds a note block for playing sounds and notes

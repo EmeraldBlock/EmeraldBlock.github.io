@@ -1,5 +1,5 @@
 <div class="itemlist">
 {% for item in include.items %}
-    {% include item.html item=item %}
+    {% include item.html item=item old=include.old %}
 {% endfor %}
 </div>

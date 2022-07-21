@@ -9,12 +9,21 @@
             {{ data.content }}
         </div>
         <div class="itemclick">
+            {% unless include.old %}
             <a href="{{ folder }}{{ data.latest }}.js" download="{{ id }}_{{ data.latest }}.js">
                 download
             </a>
             <a class="also" href="{{ href }}">
                 webpage
             </a>
+            {% else %}
+            <a class="also" href="{{ href }}">
+                play
+            </a>
+            <a href="https://github.com/EmeraldBlock/shapez.io/tree/{{ data.branch }}" target="_blank" rel="external noreferrer">
+                source
+            </a>
+            {% endunless %}
         </div>
     </div>
 </div>
