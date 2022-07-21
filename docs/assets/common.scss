@@ -30,24 +30,8 @@ a[rel*="external"]::after {
     }
 }
 
-.download {
-    float: right;
-    margin: 16px 0;
-    background-color: var(--bg-dark);
-    padding: 16px;
-
-    > h2 {
-        margin: 0;
-        font-size: 1.25em;
-    }
-    
-    > a {
-        font-size: 1.25em;
-        
-        > span {
-            color: var(--faint);
-        }
-    }
+.version {
+    color: var(--faint);
 }
 
 .itemlist {
@@ -58,6 +42,7 @@ a[rel*="external"]::after {
 
 .item {
     position: relative;
+    border: solid 2px var(--fainter);
     background-color: var(--bg-dark);
 
     > a {
@@ -84,9 +69,8 @@ a[rel*="external"]::after {
     > h3 {
         display: inline;
     }
-    > span {
+    > .version {
         font-weight: bold;
-        color: var(--faint);
     }
 }
 
@@ -103,19 +87,35 @@ a[rel*="external"]::after {
         padding: 0.25em 0.375em;
         color: unset;
         text-decoration: unset;
-    }
 
-    > .itemlink {
-        background-color: var(--bg-light);
-        gap: 0.25em;
-
-        &::before {
+        &[download]::before {
+            margin-right: 0.25em;
             height: 0;
             line-height: 0;
             font-size: 1.25em;
             font-weight: bold;
             content: "⭳";
         }
+    }
+
+    > .itemlink {
+        background-color: var(--bg-light);
+    }
+}
+
+.download {
+    float: right;
+    margin: 16px 0 16px 16px;
+    background-color: var(--bg-dark);
+    padding: 16px;
+
+    > h2 {
+        margin: 0;
+        font-size: 1.25em;
+    }
+
+    > .itemlink {
+        font-size: 1.25em;
     }
 }
 

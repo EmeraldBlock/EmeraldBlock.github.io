@@ -5,7 +5,8 @@ layout: default
 {% include data.html id=page.modid data=data %}
 <div class="download itemclick">
     <h2>download</h2>
-    <a class="itemlink" href="{{ file }}" download="{{ download }}">latest <span>{{ data.version }}</span></a>
+    <a class="itemlink" href="{{ file }}" download="{{ download }}"><span>latest <span class="version">{{ data.version }}</span></span></a>
+    <a href="https://github.com/EmeraldBlock/shapez.io-mods/tree/master/src/upmouse" target="_blank" rel="external noreferrer">source</a>
 </div>
 <div class="flavor">
     <h1>{{ data.title }}</h1>
