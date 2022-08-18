@@ -1,4 +1,10 @@
 items:
+  screenshots:
+    versions:
+      - "0.1.0"
+    latest: "0.1.0"
+    title: Superb Screenshots
+    content: Fixes and improves screenshots, plus new features
   upmouse:
     versions:
       - "0.3.0"
