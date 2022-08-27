@@ -4,7 +4,12 @@
 /**/
 @font-face {
     font-family: Roboto;
-    src: url(/assets/Roboto-Regular.ttf) format("truetype");
+    src: url(/assets/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: Roboto;
+    font-weight: bold;
+    src: url(/assets/Roboto/Roboto-Bold.ttf) format("truetype");
 }
 
 :root {
