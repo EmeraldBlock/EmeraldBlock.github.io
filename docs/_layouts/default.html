@@ -4,6 +4,10 @@
         <title>{{ page.title }}</title>
         <link rel="icon" type="image/png" href="/assets/favicon.svg"/>
         <link rel="stylesheet" href="/assets/common.css"/>
+        {% if page.modid %}
+        {% assign data = site.data.mods.items[page.modid] %}
+        {% include og.html image=page.image description=data.content %}
+        {% endif %}
     </head>
     <body>
         <header>

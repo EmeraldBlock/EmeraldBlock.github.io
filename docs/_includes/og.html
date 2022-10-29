@@ -1,0 +1,9 @@
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+{% if include.image %}
+<meta property="og:image" content="{{ site.url }}{{ page.url }}{{ include.image }}" />
+{% endif %}
+<meta property="og:description" content="{{ include.description }}" />
+<meta name="theme-color" content="#c0ffe0">
+<meta name="twitter:card" content="summary_large_image">
