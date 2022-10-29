@@ -1,5 +1,6 @@
 {% assign url = include.url | append: include.tree.name %}
 <a href={{ url }}>{{ include.tree.name }}</a>
+{% if include.tree.content.size > 0 %}
 <ul>
 {% for tree in include.tree.content %}
 <li>
@@ -8,3 +9,4 @@
 </li>
 {% endfor %}
 </ul>
+{% endif %}
