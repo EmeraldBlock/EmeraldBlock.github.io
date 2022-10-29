@@ -21,3 +21,6 @@ layout: default
     <i>{{ data.content }}</i>
 </div>
 {{ content }}
+{% if page.images %}
+{% include imagelist.html images=page.images %}
+{% endif %}
